@@ -26,7 +26,6 @@ Depends:
          ${shlibs:Depends},
          ${misc:Depends},
          hyprland,
-         qt6-base,
          qt6-wayland,
          xdg-desktop-portal,
 Provides: xdg-desktop-portal-hyprland
