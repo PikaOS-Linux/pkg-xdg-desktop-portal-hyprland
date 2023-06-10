@@ -67,6 +67,7 @@ srcdir = $(shell debian/scripts/get_pwd.sh)
 ## overriding dh_install to install files to a package:
 override_dh_install:
 		install -d $(pkgdir)/usr/bin
+		cd hyprland-share-picker && make all && cd ..
 		cp $(srcdir)/hyprland-share-picker/build/hyprland-share-picker $(pkgdir)/usr/bin
 
 ## === End end of region ===
