@@ -1,3 +1,9 @@
+xdg-desktop-portal-hyprland (0.4.0-99pika5) lunar; urgency=medium
+
+  * Fix deps
+
+ -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+
 xdg-desktop-portal-hyprland (0.4.0-99pika4) lunar; urgency=medium
 
   * Include share picker
