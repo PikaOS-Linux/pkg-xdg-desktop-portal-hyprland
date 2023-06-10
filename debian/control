@@ -10,7 +10,9 @@ Rules-Requires-Root: no
 
 Package: xdg-desktop-portal-hyprland
 Architecture: linux-any
-Depends: Depends:
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
          hyprland,
          xdg-desktop-portal,
 Provides: xdg-desktop-portal-hyprland
