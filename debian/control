@@ -15,6 +15,7 @@ Build-Depends: debhelper-compat (= 13),
                libdrm-dev,
                cmake,
                wayland-protocols,
+               uuid-dev,
                libinih-dev,
                libsystemd-dev,
 Rules-Requires-Root: no
