@@ -12,6 +12,7 @@ Build-Depends: debhelper-compat (= 13),
                libpipewire-0.3-dev,
                cmake-extras,
                cmake,
+               wayland-protocols,
 Rules-Requires-Root: no
 
 Package: xdg-desktop-portal-hyprland
