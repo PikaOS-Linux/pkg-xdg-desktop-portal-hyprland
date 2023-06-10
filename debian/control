@@ -16,6 +16,7 @@ Build-Depends: debhelper-compat (= 13),
                cmake,
                wayland-protocols,
                libinih-dev,
+               libsystemd-dev,
 Rules-Requires-Root: no
 
 Package: xdg-desktop-portal-hyprland
