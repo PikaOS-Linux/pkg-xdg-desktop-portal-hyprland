@@ -3,11 +3,17 @@ Section: main
 Priority: optional
 Maintainer: ferrreo <harderthanfire@gmail.com>
 Standards-Version: 4.6.1
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13),
+               qt6-base-dev,
+               qt6-wayland-dev,
 Rules-Requires-Root: no
 
 Package: xdg-desktop-portal-hyprland
 Architecture: linux-any
-Depends: hyprland, xdg-desktop-portal
-#
+Depends: Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         hyprland,
+         xdg-desktop-portal,
+Provides: xdg-desktop-portal-hyprland
 Description: Desktop portal for hyprland
