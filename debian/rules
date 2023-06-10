@@ -72,7 +72,7 @@ override_dh_install:
 		install -d $(pkgdir)/usr/bin
 		cp $(srcdir)/hyprland-share-picker/build/hyprland-share-picker $(pkgdir)/usr/bin/hyprland-share-picker
 		rm -Rf $(pkgdir)/usr/share/hyprland-protocols
-
+		rm -f $(pkgdir)/usr/share/pkgconfig/hyprland-protocols.pc
 ## === End end of region ===
 
 ## This here will start the build:
