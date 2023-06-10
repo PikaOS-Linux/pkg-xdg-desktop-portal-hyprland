@@ -9,11 +9,11 @@ add-apt-repository ppa:pikaos/pika
 add-apt-repository ppa:kubuntu-ppa/backports
 
 # Clone Upstream
-wget -nv https://github.com/hyprwm/xdg-desktop-portal-hyprland/releases/download/v0.4.0/v0.4.0.tar.gz
+wget -nv https://github.com/hyprwm/xdg-desktop-portal-hyprland/archive/refs/tags/v0.4.0.tar.gz
 tar -xf ./v0.4.0.tar.gz
-mkdir -p ./xdph
-cp -rvf ./debian ./xdph/
-cd ./xdph/
+mkdir -p ./xdg-desktop-portal-hyprland-0.4.0
+cp -rvf ./debian ./xdg-desktop-portal-hyprland-0.4.0/
+cd ./xdg-desktop-portal-hyprland-0.4.0/
 
 # Get build deps
 ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
