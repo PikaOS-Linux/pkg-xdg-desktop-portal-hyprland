@@ -28,5 +28,5 @@ Depends:
          hyprland,
          qt6-wayland,
          xdg-desktop-portal,
-Provides: xdg-desktop-portal-hyprland
+Provides: xdg-desktop-portal-hyprland, xdg-desktop-portal-backend (= 1.7.1)
 Description: Desktop portal for hyprland
