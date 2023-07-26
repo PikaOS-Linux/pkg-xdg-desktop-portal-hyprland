@@ -5,7 +5,6 @@ DEBIAN_FRONTEND=noninteractive
 # Clone Upstream
 git clone --recurse-submodules https://github.com/hyprwm/xdg-desktop-portal-hyprland.git
 cd xdg-desktop-portal-hyprland
-git checkout v0.4.0
 cp -rvf ../debian ./
 
 # Get build deps
