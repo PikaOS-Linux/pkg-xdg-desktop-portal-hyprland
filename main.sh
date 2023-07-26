@@ -2,6 +2,8 @@
 
 DEBIAN_FRONTEND=noninteractive
 
+apt-get update
+
 # Clone Upstream
 git clone --recurse-submodules https://github.com/hyprwm/xdg-desktop-portal-hyprland.git
 cd xdg-desktop-portal-hyprland
