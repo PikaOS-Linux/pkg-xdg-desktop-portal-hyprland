@@ -18,6 +18,7 @@ Build-Depends: debhelper-compat (= 13),
                uuid-dev,
                libinih-dev,
                libsystemd-dev,
+               libsdbus-c++-dev,
 Rules-Requires-Root: no
 
 Package: xdg-desktop-portal-hyprland
