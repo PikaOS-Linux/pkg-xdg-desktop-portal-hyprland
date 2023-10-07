@@ -36,8 +36,5 @@ Architecture: linux-any
 Depends:
          ${shlibs:Depends},
          ${misc:Depends},
-         hyprland,
-         qt6-wayland,
-         xdg-desktop-portal,
-Provides: xdg-desktop-portal-hyprland, xdg-desktop-portal-backend (= 1.7.1)
+         xdg-desktop-portal-hyprland (= ${binary:Version}),
 Description: Development files for Desktop portal for hyprland
