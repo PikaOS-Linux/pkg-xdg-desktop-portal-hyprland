@@ -30,3 +30,14 @@ Depends:
          xdg-desktop-portal,
 Provides: xdg-desktop-portal-hyprland, xdg-desktop-portal-backend (= 1.7.1)
 Description: Desktop portal for hyprland
+
+Package: xdg-desktop-portal-hyprland-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         hyprland,
+         qt6-wayland,
+         xdg-desktop-portal,
+Provides: xdg-desktop-portal-hyprland, xdg-desktop-portal-backend (= 1.7.1)
+Description: Development files for Desktop portal for hyprland
