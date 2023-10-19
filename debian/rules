@@ -56,8 +56,8 @@ srcdir = $(shell debian/scripts/get_pwd.sh)
 ## Note : overrides must be places above %:
 ## So here's a few examples:
 
-override_dh_auto_build:
-	cd hyprland-share-picker && make all && cd ..
+override_dh_build:
+        make all
 
 ## overriding dh_clean to make it not delete rust vendor files:
 #override_dh_clean:
