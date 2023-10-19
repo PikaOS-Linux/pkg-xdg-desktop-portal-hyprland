@@ -57,7 +57,7 @@ srcdir = $(shell debian/scripts/get_pwd.sh)
 ## So here's a few examples:
 
 override_dh_build:
-        make all
+	make all
 
 ## overriding dh_clean to make it not delete rust vendor files:
 #override_dh_clean:
