@@ -5,6 +5,9 @@
 export DH_VERBOSE = 1
 
 ## === Set paths env vars ===
+PREFIX = /usr/local
+LIBEXEC = /usr/lib
+SHARE = /usr/share
 
 ## Source directory, called upon by $(srcdir)
 srcdir = $(shell debian/scripts/get_pwd.sh)
@@ -71,10 +74,12 @@ override_dh_build:
 override_dh_auto_install:
 
 override_dh_install:
-		install -d $(pkgdir)/usr/bin
-		cp $(srcdir)/hyprland-share-picker/build/hyprland-share-picker $(pkgdir)/usr/bin/hyprland-share-picker
-		rm -Rf $(pkgdir)/usr/share/hyprland-protocols
-		rm -f $(pkgdir)/usr/share/pkgconfig/hyprland-protocols.pc
+		cp -f ./build/hyprland-share-picker/hyprland-share-picker $(pkgdir)/usr/bin
+		cp -f ./build/xdg-desktop-portal-hyprland $(pkgdir)/${LIBEXEC}/
+		cp -f ./hyprland.portal $(pkgdir)/${SHARE}/xdg-desktop-portal/portals/
+		sed "s|@libexecdir@|${LIBEXEC}|g" ./org.freedesktop.impl.portal.desktop.hyprland.service.in > $(pkgdir)/${SHARE}/dbus-1/services/org.freedesktop.impl.portal.desktop.hyprland
+		sed "s|@libexecdir@|${LIBEXEC}|g" ./contrib/systemd/xdg-desktop-portal-hyprland.service.in > $(pkgdir)/${LIBEXEC}/systemd/user/xdg-desktop-portal-hyprland.service
+		chmod 755 $(pkgdir)/${LIBEXEC}/xdg-desktop-portal-hyprland
 ## === End end of region ===
 
 ## This here will start the build:
