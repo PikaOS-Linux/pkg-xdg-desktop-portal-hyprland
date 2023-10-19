@@ -5,7 +5,7 @@
 export DH_VERBOSE = 1
 
 ## === Set paths env vars ===
-PREFIX = /usr/local
+PREFIX = /usr
 LIBEXEC = /usr/lib
 SHARE = /usr/share
 
@@ -74,11 +74,14 @@ override_dh_build:
 override_dh_auto_install:
 
 override_dh_install:
-		cp -f ./build/hyprland-share-picker/hyprland-share-picker $(pkgdir)/usr/bin
-		cp -f ./build/xdg-desktop-portal-hyprland $(pkgdir)/${LIBEXEC}/
-		cp -f ./hyprland.portal $(pkgdir)/${SHARE}/xdg-desktop-portal/portals/
-		sed "s|@libexecdir@|${LIBEXEC}|g" ./org.freedesktop.impl.portal.desktop.hyprland.service.in > $(pkgdir)/${SHARE}/dbus-1/services/org.freedesktop.impl.portal.desktop.hyprland
-		sed "s|@libexecdir@|${LIBEXEC}|g" ./contrib/systemd/xdg-desktop-portal-hyprland.service.in > $(pkgdir)/${LIBEXEC}/systemd/user/xdg-desktop-portal-hyprland.service
+		mkdir -p $(pkgdir)/${LIBEXEC}
+		mkdir -p $(pkgdir)/${SHARE}
+		mkdir -p $(pkgdir)/usr/bin
+		cp -f $(srcdir)/build/hyprland-share-picker/hyprland-share-picker $(pkgdir)/usr/bin/hyprland-share-picker
+		cp -f $(srcdir)/build/xdg-desktop-portal-hyprland $(pkgdir)/${LIBEXEC}/xdg-desktop-portal-hyprland
+		cp -f $(srcdir)/hyprland.portal $(pkgdir)/${SHARE}/xdg-desktop-portal/portals/hyprland.portal
+		sed "s|@libexecdir@|${LIBEXEC}|g" $(srcdir)/org.freedesktop.impl.portal.desktop.hyprland.service.in > $(pkgdir)/${SHARE}/dbus-1/services/org.freedesktop.impl.portal.desktop.hyprland
+		sed "s|@libexecdir@|${LIBEXEC}|g" $(srcdir)/contrib/systemd/xdg-desktop-portal-hyprland.service.in > $(pkgdir)/${LIBEXEC}/systemd/user/xdg-desktop-portal-hyprland.service
 		chmod 755 $(pkgdir)/${LIBEXEC}/xdg-desktop-portal-hyprland
 ## === End end of region ===
 
