@@ -77,6 +77,8 @@ override_dh_install:
 		mkdir -p $(pkgdir)/${LIBEXEC}
 		mkdir -p $(pkgdir)/${SHARE}
 		mkdir -p $(pkgdir)/usr/bin
+		mkdir -p $(pkgdir)/${SHARE}/dbus-1/services/
+		mkdir -p $(pkgdir)/${LIBEXEC}/systemd/user/
 		cp -f $(srcdir)/build/hyprland-share-picker/hyprland-share-picker $(pkgdir)/usr/bin/hyprland-share-picker
 		cp -f $(srcdir)/build/xdg-desktop-portal-hyprland $(pkgdir)/${LIBEXEC}/xdg-desktop-portal-hyprland
 		cp -f $(srcdir)/hyprland.portal $(pkgdir)/${SHARE}/xdg-desktop-portal/portals/hyprland.portal
